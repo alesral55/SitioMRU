@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MRU MRUV</title>
+    <link rel="stylesheet" href="./Css/normalize.css">
+    <link rel="stylesheet" href="./Css/estiloPrincipal.css">
+</head>
+
+<body>
+
+    <div class="bloqueMRU">
+        <h1>Movimiento Rectilíneo Uniforme</h1>
+        <div class="contenedor">
+
+            <section>
+
+                <div class="layout">
+                    <div>
+                        <h2>Introducción al MRU</h2>
+                        <p>El Movimiento Rectilíneo Uniforme (MRU) es un concepto fundamental en la física que describe
+                            el movimiento de un objeto a lo largo de una línea recta a una velocidad constante. En el
+                            MRU, la velocidad del objeto no cambia con el tiempo, lo que significa que se mueve la misma
+                            distancia en igual cantidad de tiempo. Este tipo de movimiento es esencial para comprender
+                            otros conceptos más complejos en la física y la cinemática.</p>
+                        <h3>Características Clave del MRU</h3>
+                        <ul>
+                            <li>Velocidad Constante: La velocidad del objeto en MRU no cambia en el tiempo. Se
+                                representa como "v" y se mide en unidades de distancia por unidad de tiempo (por
+                                ejemplo, metros por segundo).</li>
+                            <li>Trayectoria Rectilínea: El objeto se mueve a lo largo de una línea recta sin cambiar de
+                                dirección.</li>
+                            <li>Distancia y Tiempo: En el MRU, la distancia recorrida es directamente proporcional al
+                                tiempo transcurrido.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <img src="./Imagenes/mru.png" alt="">
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+        <div class="contenedor">
+
+            <section>
+
+                <div class="layout">
+                    <div>
+                        <img src="./Imagenes/fromulas.png" alt="">
+                    </div>
+                    <div>
+                        <h2>Fórmulas del MRU</h2>
+                        <p>Las siguientes son algunas fórmulas importantes relacionadas con el MRU:</p>
+                        <ul>
+                            <li>Fórmula de la Distancia: <em>D = v * t</em></li>
+                            <li>Fórmula de la Velocidad: <em>v = Δd / Δt</em></li>
+                            <li>Fórmula de la Tiempo: <em>t = Δd / Δv</em></li>
+                        </ul>
+                        <h2>Aplicaciones del MRU</h2>
+                        <p>El MRU se encuentra en numerosos aspectos de la vida cotidiana y la física, incluyendo:</p>
+                        <ul>
+                            <li>Movimiento de vehículos en autopistas.</li>
+                            <li>Trayectoria de proyectiles en la física.</li>
+                            <li>Movimiento de objetos en líneas de producción.</li>
+                            <li>Análisis de datos en ciencia y tecnología.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </div>
+
+        <div class="contenedor">
+            <section>
+
+                <h2>Ejemplos del MRU</h2>
+                <p>A continuación, se presentan dos ejemplos de problemas de MRU:</p>
+                <ol>
+                    <li>Ejemplo 1: Un automóvil se desplaza a una velocidad constante de 30 m/s durante 60 segundos.
+                        ¿Cuál es la distancia total recorrida?</li>
+                    <li>Ejemplo 2: Un ciclista viaja a una velocidad constante de 10 km/h durante 2 horas. ¿Cuál es la
+                        distancia total recorrida?</li>
+                </ol>
+
+
+            </section>
+        </div>
+        <div class="contenedor">
+            <h2>Calculadora de MRU</h2>
+            <div class="secFormularios">
+                <div class="itemForm">
+                    <h2>Calculadora de Distancia </h2>
+                    Fórmula de la Distancia: <em>D = v * t</em>
+                    
+                    <form action="">
+                        <label for="fdVelocidad">Velocidad:</label>
+                        <br>
+                        <input type="number" id="fdVelocidad" placeholder="Ingresa la velocidad">
+                        <br>
+                        <label for="fdTiempo">Tiempo:</label>
+                        <br>
+                        <input type="number" id="fdTiempo" placeholder="Ingresa el tiempo">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="fdResultado"></label>
+                    <br>
+                    <button onclick="CalcularDistancia()">Calcular Distancia</button>
+                </div>
+                <div class="itemForm">
+                    <h2>Calculadora de Velocidad</h2>
+                    Fórmula de la Velocidad: <em>v = Δd / Δt</em>
+                    <form action="">
+                        <label for="fvDistancia">Distancia:</label>
+                        <br>
+                        <input type="number" id="fvDistancia" placeholder="Ingresa la distancia">
+                        <br>
+                        <label for="fvTiempo">Tiempo:</label>
+                        <br>
+                        <input type="number" id="fvTiempo" placeholder="Ingresa el tiempo">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="fvResultado"></label>
+                    <br>
+                    <button onclick="CalcularVelocidad()">Calcular Velocidad</button>
+                </div>
+                <div class="itemForm">
+                    <h2>Calculadora de Tiempo</h2>
+                    Fórmula de la Tiempo: <em>t = Δd / Δv</em>
+                    <form action="">
+                        <label for="ftDistancia">Distancia:</label>
+                        <br>
+                        <input type="number" id="ftDistancia" placeholder="Ingresa la distancia">
+                        <br>
+                        <label for="ftVelocidad">Velocidad:</label>
+                        <br>
+                        <input type="number" id="ftVelocidad" placeholder="Ingresa la velocidad">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="ftResultado"></label>
+                    <br>
+                    <button onclick="CalcularTiempo()">Calcular Tiempo</button>
+                </div>
+            </div>
+           
+        </div>
+
+
+    </div>
+    <div class="bloqueMRUV">
+        <h1>Movimiento Rectilíneo Uniformemente Variado</h1>
+        <div class="contenedor">
+
+            <section>
+
+                <div class="layout">
+                    <div>
+                        <h2>Introducción a MRUV</h2>
+                        <p>El Movimiento Rectilíneo Uniformemente Variado (MRUV) es un concepto fundamental en la física que describe 
+                            el movimiento de un objeto a lo largo de una línea recta en la que su velocidad cambia de manera
+                             constante con el tiempo. A diferencia del MRU, en el MRUV la velocidad del objeto no es constante,
+                              sino que varía uniformemente.
+                        </p>
+                        <h3>Características Clave del MRUV </h3>
+                            <ul>
+                                <li>
+                                    Aceleración Constante: En el MRUV, la aceleración del objeto es constante. La aceleración se
+                                     define como el cambio en la velocidad del objeto por unidad de tiempo y se mide en unidades 
+                                     como metros por segundo al cuadrado (m/s²).
+                                </li>
+                                <li>
+                                    Variación de Velocidad: A diferencia del Movimiento Rectilíneo Uniforme (MRU), en el MRUV, 
+                                    la velocidad del objeto no permanece constante; aumenta o disminuye de manera 
+                                    uniforme con el tiempo debido a la aceleración constante.
+                                </li>
+                                
+                            </ul>
+                    </div>
+
+                    <div>
+                        <img src="./Imagenes/mruv.jpg" alt="">
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+        <div class="contenedor">
+
+            <section>
+
+                <div class="layout">
+                    <div>
+                        <img src="./Imagenes/fromulasMRUV.jpg" alt="">
+                    </div>
+                    <div>
+                        <h2>Fórmulas del MRUV</h2>
+                        <p>Las siguientes son algunas fórmulas importantes relacionadas con el MRUV:</p>
+                        <ul>
+                            <li>Fórmula de la Velocidad Inicial y Final: <em>vf = vi + (a * t)</em></li>
+                            <li>Fórmula de la Posición:  <em>x = xi + (vi * t) + (0.5 * a * t²)</em></li>
+                            <li>Fórmula del Tiempo: <em>t = (v_f - v_i) / a</em></li>
+                        </ul>
+                        <h2>Aplicaciones del MRUV</h2>
+                        <p>El MRUV se encuentra en numerosos aspectos de la física y la ciencia, incluyendo:</p>
+                        <ul>
+                            <li>Caída libre de objetos bajo la gravedad de la Tierra.</li>
+                            <li>Movimiento de vehículos que aceleran o desaceleran.</li>
+                            <li>Trayectoria de proyectiles en la física.</li>
+                            <li>Dinámica de cuerpos en movimiento con aceleración constante.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </section>
+        </div>
+
+        <div class="contenedor">
+            <h2>Calculadora de MRUV</h2>
+            <div class="secFormularios">
+                <div class="itemForm">
+                    <h2>Calculadora de Velocidad </h2>
+                    Fórmula de la Velocidad Inicial y Final: <br>
+                    <em>vf = vi + (a * t) </em>
+                    
+                    <form action="">
+                        <label for="f2vVelocidadInicial">Velocidad Inicial:</label>
+                        <br>
+                        <input type="number" id="f2vVelocidadInicial" placeholder="Ingresa la velocidad inial">
+                        <br>
+                        <label for="f2vAceleracion">Aceleración:</label>
+                        <br>
+                        <input type="number" id="f2vAceleracion" placeholder="Ingresa la aceleración">
+                        <br>
+                        <label for="f2vTiempo">Tiempo:</label>
+                        <br>
+                        <input type="number" id="f2vTiempo" placeholder="Ingresa el tiempo">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="f2vResultado"></label>
+                    <br>
+                    <button onclick="CalcularVelocidadInicial()">Calcular Velocidad Final</button>
+                </div>
+                <div class="itemForm">
+                    <h2>Calculadora de Posición</h2>
+                    Fórmula de la Posición: <br> <em>x = xi + (vi * t) + (0.5 * a * t²)</em>
+                    <form action="">
+                        <label for="f2pPosicion">Posicion Inicial:</label>
+                        <br>
+                        <input type="number" id="f2pPosicion" placeholder="Ingresa la posicion inicial">
+                        <br>
+                        <label for="f2pTiempo">Tiempo:</label>
+                        <br>
+                        <input type="number" id="f2pTiempo" placeholder="Ingresa el tiempo">
+                        <br>
+                        <label for="f2pVelocidadInicial">Velocidad Inicial:</label>
+                        <br>
+                        <input type="number" id="f2pVelocidadInicial" placeholder="Ingresa la velocidad inicial">
+                        
+                        <br>
+                        <label for="f2vAceleracion">Aceleración:</label>
+                        <br>
+                        <input type="number" id="f2pAceleracion" placeholder="Ingresa la aceleración">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="f2pResultado"></label>
+                    <br>
+                    <button onclick="CalcularPosicionFinal()">Calcular Posicion Final</button>
+                </div>
+                <div class="itemForm">
+                    <h2>Calculadora de Tiempo</h2>
+                    Fórmula del Tiempo: <em>t = (v_f - v_i) / a</em>
+                    <form action="">
+                        <label for="f2tVelocidadInicial">Velocidad Inicial:</label>
+                        <br>
+                        <input type="number" id="f2tVelocidadInicial" placeholder="Ingresa la velociad inicial">
+                        <br>
+                        <label for="f2tVelocidadFinal">Velocidad Final:</label>
+                        <br>
+                        <input type="number" id="f2tVelocidadFinal" placeholder="Ingresa la velocidad final">
+                        <br>
+                        <label for="f2tAceleracion">Aceleración:</label>
+                        <br>
+                        <input type="number" id="f2tAceleracion" placeholder="Ingresa la aceleración">
+                    </form>
+                    <label >Resultado:</label>
+                    <label id="f2tResultado"></label>
+                    <br>
+                    <button onclick="CalcularTiempo2()">Calcular Tiempo</button>
+                </div>
+            </div>
+           
+        </div>
+
+    </div>
+
+    <script src="./JS/calulosMR.js"></script>
+</body>
+<footer>
+    <div class="ctmFooter">
+        <img class="imgFooter" src="./Imagenes/umg.png" alt="">
+        <p>Derechos de reservados: <br> &copy; Antony Alessandro Ralon Valenuzela 2290-20-16986 <br> Universidad Mariano
+            Galvez de Guatemala, sede Solola</p>
+        <p></p>
+    </div>
+
+</footer>
+
+</html>
